@@ -80,8 +80,7 @@ local function extend(ls)
 	return vim.tbl_deep_extend("force", req, {
 		on_attach = on_attach,
 		flags = {
-			--debounce_text_changes = 150, -- default
-			debounce_text_changes = 50,
+			debounce_text_changes = 150, -- default
 		},
 		capabilities = capabilities,
 	})
