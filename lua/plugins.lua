@@ -14,6 +14,7 @@ return require("packer").startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+	use("j-hui/fidget.nvim")
 
 	-- CMP
 	use("hrsh7th/cmp-nvim-lsp")
