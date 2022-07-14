@@ -37,3 +37,4 @@ vim.opt.ignorecase = true
 vim.opt.so = 5
 vim.opt.termguicolors = true
 vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.wrap = false
