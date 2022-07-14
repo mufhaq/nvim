@@ -5,6 +5,7 @@ end
 
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local compare = require("cmp.config.compare")
 
 cmp.setup({
 	snippet = {
@@ -89,6 +90,19 @@ cmp.setup({
 			})[entry.source.name]
 			return vim_item
 		end,
+	},
+	sorting = {
+		priority_weight = 2,
+		comparators = {
+			compare.offset,
+			compare.exact,
+			compare.score,
+			compare.recently_used,
+			compare.locality,
+			compare.sort_text,
+			compare.length,
+			compare.order,
+		},
 	},
 })
 
