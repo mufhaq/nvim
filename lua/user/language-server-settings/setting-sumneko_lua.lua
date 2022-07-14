@@ -2,7 +2,9 @@ local util = require("lspconfig").util
 return {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
-	root_dir = util.root_pattern(".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"),
+	root_dir = function(fname)
+		return util.find_git_ancestor(fname) or util.path.dirname(fname)
+	end,
 	single_file_support = true,
 	settings = {
 		Lua = {
