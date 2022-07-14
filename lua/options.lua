@@ -9,11 +9,19 @@ vim.cmd([[
     let $FZF_DEFAULT_COMMAND="find . ! -path '*.git*' ! -path '*node_modules*'"
 ]])
 
--- global
---vim.g.gruvbox_contrast_dark = "hard"
-vim.g.vscode_italic_comment = 1
-vim.g.vscode_transparent = 1
 vim.o.background = "dark"
+local vscode_colors = require("vscode.colors")
+require("vscode").setup({
+	transparent = true,
+	italic_comments = true,
+	disable_nvimtree_bg = true,
+	color_overrides = {
+		--vscLineNumber = "#FFFFFF",
+	},
+	group_overrides = {
+		Cursor = { fg = vscode_colors.vscDarkBlue, bg = vscode_colors.vscLightGreen, bold = true },
+	},
+})
 
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false
@@ -39,3 +47,5 @@ vim.opt.termguicolors = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
+
+-- global
