@@ -24,9 +24,9 @@ return require("packer").startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("L3MON4D3/LuaSnip")
 	use("hrsh7th/cmp-nvim-lua")
+	use("saadparwaiz1/cmp_luasnip")
 
 	-- Others
-	use("saadparwaiz1/cmp_luasnip")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -46,4 +46,5 @@ return require("packer").startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+	use("lewis6991/impatient.nvim")
 end)
