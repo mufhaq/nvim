@@ -7,7 +7,7 @@ null_ls.setup({
 	sources = {
 		formatting.gofmt,
 		formatting.prettier.with({
-			extra_args = { "--tab-width=8" },
+			extra_args = { "--tab-width=4" },
 		}),
 		formatting.stylua,
 		formatting.black.with({
