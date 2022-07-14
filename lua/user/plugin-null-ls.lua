@@ -6,10 +6,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	sources = {
 		formatting.gofmt,
-		--formatting.prettier.with({
-		--	extra_args = { "--tab-width=4" },
-		--}),
-		formatting.prettierd,
+		formatting.prettier.with({
+			extra_args = { "--tab-width=8" },
+		}),
 		formatting.stylua,
 		formatting.black.with({
 			extra_args = { "--fast" },
