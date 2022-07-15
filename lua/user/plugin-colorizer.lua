@@ -1,0 +1,10 @@
+require("colorizer").setup({
+	"go",
+	"javascript",
+	"typescript",
+	"rust",
+	"python",
+	"php",
+	"java",
+	"lua",
+})
