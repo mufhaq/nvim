@@ -37,6 +37,7 @@ require("nvim-lsp-installer").setup({
 		"gopls",
 		"tsserver",
 		"pyright",
+		"rust_analyzer",
 		"intelephense",
 		"bashls",
 	},

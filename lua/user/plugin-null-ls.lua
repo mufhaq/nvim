@@ -13,6 +13,7 @@ null_ls.setup({
 		formatting.black.with({
 			extra_args = { "--fast" },
 		}),
+		formatting.rustfmt,
 		formatting.phpcsfixer.with({
 			extra_args = { "--using-cache=no" },
 		}),
