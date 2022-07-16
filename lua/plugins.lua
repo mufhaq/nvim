@@ -29,9 +29,8 @@ return require("packer").startup(function(use)
 	-- Others
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	use("jose-elias-alvarez/null-ls.nvim")
-	use({ "junegunn/fzf", run = "./install --bin" })
-	use("junegunn/fzf.vim")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
