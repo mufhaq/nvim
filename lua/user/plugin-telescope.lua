@@ -15,21 +15,13 @@ telescope.setup({
 	},
 	pickers = {
 		find_files = {
-			width = 0.45,
-			layout_strategy = "horizontal",
-			layout_config = {
-				preview_width = 0.55,
-			},
+			theme = "ivy",
 		},
 	},
 	extensions = {
 		file_browser = {
 			hijack_netrw = true,
-			width = 0.45,
-			layout_strategy = "horizontal",
-			layout_config = {
-				preview_width = 0.55,
-			},
+			theme = "ivy",
 			mappings = {
 				["i"] = {
 					["<C-n>"] = fb_actions.create,
