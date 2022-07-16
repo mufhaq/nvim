@@ -4,6 +4,14 @@ local fb_actions = telescope.extensions.file_browser.actions
 
 telescope.setup({
 	defaults = {
+		file_ignore_patterns = {
+			".git/",
+			"target/",
+			"docs/",
+			"vendor/",
+			"__pycache__/",
+			"node_modules/",
+		},
 		mappings = {
 			i = {
 				["<esc>"] = actions.close,
@@ -16,6 +24,7 @@ telescope.setup({
 	pickers = {
 		find_files = {
 			theme = "ivy",
+			hidden = true,
 		},
 	},
 	extensions = {
