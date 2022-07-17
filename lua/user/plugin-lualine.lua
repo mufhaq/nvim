@@ -91,26 +91,6 @@ local function color_by_mode()
 	return { fg = mode_color_fg[vim.fn.mode()], bg = mode_color_bg[vim.fn.mode()], gui = "bold" }
 end
 
-local function color_by_mode_sep()
-	local mode_color_bg = {
-		n = colors.blue,
-		v = colors.yellow,
-		V = colors.yellow,
-		i = colors.green,
-		r = colors.red,
-		c = colors.pink,
-	}
-	return { fg = mode_color_bg[vim.fn.mode()], gui = "bold" }
-end
-
-local function sep_right()
-	return "  "
-end
-
-local function sep_left()
-	return "  "
-end
-
 ins_left({
 	"mode",
 	color = color_by_mode,
@@ -119,12 +99,6 @@ ins_left({
 
 ins_left({
 	"branch",
-})
-
-ins_left({
-	sep_right,
-	color = color_by_mode_sep,
-	padding = { left = 0, right = 0 },
 })
 
 ins_left({
@@ -141,20 +115,8 @@ ins_left({
 })
 
 ins_left({
-	sep_right,
-	color = color_by_mode_sep,
-	padding = { left = 0, right = 0 },
-})
-
-ins_left({
 	"filesize",
 	cond = conditions.buffer_not_empty,
-})
-
-ins_left({
-	sep_right,
-	color = color_by_mode_sep,
-	padding = { left = 0, right = 0 },
 })
 
 ins_left({
@@ -167,30 +129,13 @@ ins_left({
 		color_warn = { fg = colors.yellow },
 		color_info = { fg = colors.cyan },
 	},
-	always_visible = true,
+	update_in_insert = true,
+	always_visible = false,
 })
-
---ins_left({
---	sep_right,
---	color = color_by_mode_sep,
---	padding = { left = 0, right = 0 },
---})
---
---ins_right({
---	sep_left,
---	color = color_by_mode_sep,
---	padding = { left = 0, right = 0 },
---})
 
 ins_right({
 	"o:encoding",
 	cond = conditions.hide_in_width,
-})
-
-ins_right({
-	sep_left,
-	color = color_by_mode_sep,
-	padding = { left = 0, right = 0 },
 })
 
 ins_right({
@@ -211,12 +156,6 @@ ins_right({
 	end,
 	icon = " LSP:",
 	color = { fg = colors.cyan },
-})
-
-ins_right({
-	sep_left,
-	color = color_by_mode_sep,
-	padding = { left = 0, right = 0 },
 })
 
 ins_right({
