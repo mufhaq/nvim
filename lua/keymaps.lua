@@ -15,3 +15,7 @@ keymap("n", "<leader>l", ":lua require('telescope.builtin').live_grep()<cr>", op
 keymap("n", "<leader>b", ":lua require('telescope.builtin').buffers()<cr>", opts)
 keymap("n", "<leader>s", ":lua require('telescope.builtin').grep_string()<cr>", opts)
 keymap("n", "<leader>f", ":Telescope file_browser<cr>", opts)
+
+-- Sniprun
+keymap("n", "<F5>", ":%SnipRun<cr>", opts)
+keymap("n", "<F6>", ":SnipClose<cr>", opts)
