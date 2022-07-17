@@ -4,7 +4,7 @@ local colors = {
 	fg = "#262626",
 	white = "#ffffff",
 	black = "#000000",
-	dark = "#1f1f1f",
+	dark = "#161616",
 	red = "#f44747",
 	green = "#4EC9B0",
 	blue = "#0a7aca",
@@ -78,10 +78,11 @@ local function color_by_mode()
 		V = colors.yellow,
 		i = colors.green,
 		r = colors.red,
+		R = colors.red,
 		c = colors.pink,
 	}
 	local mode_color_fg = {
-		n = colors.white,
+		n = colors.bg,
 		v = colors.bg,
 		V = colors.bg,
 		i = colors.bg,
