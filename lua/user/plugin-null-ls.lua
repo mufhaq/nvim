@@ -8,6 +8,9 @@ null_ls.setup({
 		formatting.gofmt,
 		formatting.prettier.with({
 			extra_args = { "--tab-width=4" },
+			disabled_filetypes = {
+				"yaml",
+			},
 		}),
 		formatting.stylua,
 		formatting.black.with({
