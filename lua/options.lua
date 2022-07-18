@@ -47,5 +47,7 @@ vim.opt.termguicolors = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- global
