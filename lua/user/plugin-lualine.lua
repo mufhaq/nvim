@@ -1,7 +1,5 @@
 local colors = {
-	bg = "#161616",
-	bg2 = "#404040",
-	fg = "#262626",
+	fg = "#161616",
 	white = "#ffffff",
 	black = "#000000",
 	dark = "#161616",
@@ -82,12 +80,12 @@ local function color_by_mode()
 		c = colors.pink,
 	}
 	local mode_color_fg = {
-		n = colors.bg,
-		v = colors.bg,
-		V = colors.bg,
-		i = colors.bg,
-		r = colors.bg,
-		c = colors.bg,
+		n = colors.fg,
+		v = colors.fg,
+		V = colors.fg,
+		i = colors.fg,
+		r = colors.fg,
+		c = colors.fg,
 	}
 	return { fg = mode_color_fg[vim.fn.mode()], bg = mode_color_bg[vim.fn.mode()], gui = "bold" }
 end
