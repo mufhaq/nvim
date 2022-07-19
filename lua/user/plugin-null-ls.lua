@@ -20,6 +20,7 @@ null_ls.setup({
 		formatting.phpcsfixer.with({
 			extra_args = { "--using-cache=no" },
 		}),
+		formatting.clang_format,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
