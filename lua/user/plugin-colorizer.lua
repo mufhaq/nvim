@@ -7,4 +7,6 @@ require("colorizer").setup({
 	"php",
 	"java",
 	"lua",
+	"c",
+	"cpp",
 })
