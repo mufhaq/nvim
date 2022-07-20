@@ -15,3 +15,6 @@ require("user.plugin-indent-blankline")
 require("user.plugin-impatient")
 require("user.plugin-colorizer")
 require("user.plugin-sniprun")
+
+-- keep this line at the very bottom
+require("functions").init()

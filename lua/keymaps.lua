@@ -1,3 +1,4 @@
+local functions = require("functions").user
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -17,5 +18,5 @@ keymap("n", "<leader>s", ":lua require('telescope.builtin').grep_string()<cr>", 
 keymap("n", "<leader>f", ":Telescope file_browser<cr>", opts)
 
 -- Sniprun
-keymap("n", "<F5>", ":%SnipRun<cr>", opts)
+keymap("n", "<F5>", functions.sniprun, opts)
 keymap("n", "<F6>", ":SnipClose<cr>", opts)
