@@ -3,9 +3,9 @@ _G.M = {}
 function M.init()
 	vim.cmd([[
     function SnipRun()
-        let b:caret = winsaveview()
+        let caret = winsaveview()
         %SnipRun
-        call winrestview(b:caret)
+        call winrestview(caret)
     endfunction
     ]])
 end
