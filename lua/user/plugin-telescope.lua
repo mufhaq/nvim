@@ -26,6 +26,10 @@ telescope.setup({
 			theme = "ivy",
 			hidden = true,
 		},
+		grep_string = {
+			theme = "ivy",
+			hidden = true,
+		},
 	},
 	extensions = {
 		file_browser = {
