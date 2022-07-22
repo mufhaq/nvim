@@ -107,6 +107,7 @@ cmp.setup({
 			compare.order,
 		},
 	},
+	preselect = cmp.PreselectMode.None, -- Default: cmp.PreselectMode.Item
 })
 
 -- Set configuration for specific filetype.
