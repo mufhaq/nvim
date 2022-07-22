@@ -133,7 +133,7 @@ cmp.setup.cmdline(":", {
 		{
 			name = "path",
 			option = {
-				trailing_slash = true,
+				trailing_slash = false,
 			},
 		},
 	}, {
