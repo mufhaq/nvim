@@ -8,11 +8,12 @@ require("nvim-tree").setup({
 			},
 		},
 		width = "25%",
-		number = true,
-		relativenumber = true,
+		number = false,
+		relativenumber = false,
 		signcolumn = "yes",
 	},
 	renderer = {
+		add_trailing = true,
 		group_empty = true,
 	},
 	filters = {
