@@ -15,6 +15,23 @@ require("nvim-tree").setup({
 	renderer = {
 		add_trailing = true,
 		group_empty = true,
+		icons = {
+			webdev_colors = true,
+			git_placement = "before",
+			padding = "  ",
+			show = {
+				file = true,
+				folder = true,
+				folder_arrow = true,
+				git = true,
+			},
+			glyphs = {
+				folder = {
+					arrow_open = "﬌",
+					arrow_closed = "",
+				},
+			},
+		},
 	},
 	filters = {
 		dotfiles = true,

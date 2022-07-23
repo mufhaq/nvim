@@ -1,4 +1,3 @@
-vim.cmd([[ colo vscode ]])
 --vim.cmd([[ hi Normal guibg=none guifg=white ctermbg=none ctermfg=white ]])
 vim.cmd([[ 
     syntax on
@@ -10,19 +9,6 @@ vim.cmd([[
 ]])
 
 vim.o.background = "dark"
-
-local vscode_colors = require("vscode.colors")
-require("vscode").setup({
-	transparent = true,
-	italic_comments = true,
-	disable_nvimtree_bg = true,
-	color_overrides = {
-		--vscLineNumber = '#FFFFFF',
-	},
-	group_overrides = {
-		Cursor = { fg = vscode_colors.vscDarkBlue, bg = vscode_colors.vscLightGreen, bold = true },
-	},
-})
 
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false
