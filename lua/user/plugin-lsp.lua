@@ -40,6 +40,7 @@ require("nvim-lsp-installer").setup({
 		"rust_analyzer",
 		"intelephense",
 		"bashls",
+		"clangd",
 	},
 	automatic_installation = false,
 
