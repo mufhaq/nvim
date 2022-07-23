@@ -16,7 +16,7 @@ require("user.plugin-impatient")
 require("user.plugin-colorizer")
 require("user.plugin-sniprun")
 require("user.plugin-nvim-tree")
-require("colorscheme").vscode()
+require("colorscheme").onedark()
 
 -- keep this line at the very bottom
 require("functions").init()
