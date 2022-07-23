@@ -8,9 +8,9 @@ function M.vscode()
 	vim.cmd([[ colo vscode ]])
 	local c = require("vscode.colors")
 	require("vscode").setup({
-		transparent = true,
+		transparent = false,
 		italic_comments = true,
-		disable_nvimtree_bg = true,
+		disable_nvimtree_bg = false,
 		color_overrides = {
 			--vscLineNumber = "#FFFFFF",
 		},
@@ -24,7 +24,7 @@ function M.onedark()
 	vim.cmd([[ colo vscode ]])
 	require("onedark").setup({
 		-- Main options --
-		style = "dark", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+		style = "warmer", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
 		transparent = true, -- Show/hide background
 		term_colors = true, -- Change terminal color as per the selected theme style
 		ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
