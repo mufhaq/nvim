@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
 	-- Colorschemes
 	use("morhetz/gruvbox")
 	use("Mofiqul/vscode.nvim")
+	use("navarasu/onedark.nvim")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
@@ -41,4 +42,6 @@ return require("packer").startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	use({ "kyazdani42/nvim-tree.lua" })
+	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
 end)

@@ -58,34 +58,8 @@ cmp.setup({
 	}),
 	formatting = {
 		format = function(entry, vim_item)
-			local symbol = {
-				Text = " ",
-				Method = " ",
-				Function = " ",
-				Constructor = " ",
-				Field = " ",
-				Variable = " ",
-				Class = " ",
-				Interface = " ",
-				Module = " ",
-				Property = " ",
-				Unit = " ",
-				Value = " ",
-				Enum = " ",
-				Keyword = " ",
-				Snippet = " ",
-				Color = " ",
-				File = " ",
-				Reference = " ",
-				Folder = " ",
-				EnumMember = " ",
-				Constant = " ",
-				Struct = " ",
-				Event = " ",
-				Operator = " ",
-				TypeParameter = " ",
-			}
-			vim_item.kind = symbol[vim_item.kind]
+			local icons = require("icons")
+			vim_item.kind = icons[vim_item.kind]
 			vim_item.menu = ({
 				nvim_lsp = "[LSP]",
 				look = "[Dict]",

@@ -20,3 +20,6 @@ keymap("n", "<leader>f", require("telescope").extensions.file_browser.file_brows
 -- Sniprun
 keymap("n", "<F5>", functions.sniprun, opts)
 keymap("n", "<F6>", ":SnipClose<cr>", opts)
+
+-- Nvim-Tree
+keymap("n", "<C-\\>", ":NvimTreeToggle<cr>", opts)
