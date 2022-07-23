@@ -11,11 +11,11 @@ local opts = { noremap = true, silent = true }
 --  command_mode        = 'c'
 
 -- Telescope
-keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>", opts)
-keymap("n", "<leader>l", ":lua require('telescope.builtin').live_grep()<cr>", opts)
-keymap("n", "<leader>b", ":lua require('telescope.builtin').buffers()<cr>", opts)
-keymap("n", "<leader>s", ":lua require('telescope.builtin').grep_string()<cr>", opts)
-keymap("n", "<leader>f", ":Telescope file_browser<cr>", opts)
+keymap("n", "<C-p>", require("telescope.builtin").find_files, opts)
+keymap("n", "<leader>l", require("telescope.builtin").live_grep, opts)
+keymap("n", "<leader>b", require("telescope.builtin").buffers, opts)
+keymap("n", "<leader>s", require("telescope.builtin").grep_string, opts)
+keymap("n", "<leader>f", require("telescope").extensions.file_browser.file_browser, opts)
 
 -- Sniprun
 keymap("n", "<F5>", functions.sniprun, opts)

@@ -35,6 +35,7 @@ telescope.setup({
 		file_browser = {
 			hijack_netrw = true,
 			theme = "ivy",
+			path = "%:p:h",
 			mappings = {
 				["i"] = {
 					["<C-n>"] = fb_actions.create,
