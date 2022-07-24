@@ -1,7 +1,7 @@
 local colors = {
 	fg = "#161616",
-	bg = "#121212",
-	--bg = nil,
+	--bg = "#121212",
+	bg = nil,
 	white = "#ffffff",
 	black = "#161616",
 	red = "#f44747",
@@ -93,9 +93,15 @@ local function color_by_mode()
 end
 
 ins_left({
+	function()
+		return "▊"
+	end,
+	color = { fg = colors.blue },
+	padding = { left = 0, right = 0 },
+})
+
+ins_left({
 	"mode",
-	color = color_by_mode,
-	separator = { left = "", right = " " },
 })
 
 ins_left({
@@ -107,7 +113,7 @@ ins_left({
 	colored = true,
 	icon_only = true,
 	cond = conditions.buffer_not_empty,
-	padding = { left = 1 },
+	padding = { left = 1, right = 0 },
 })
 
 ins_left({
@@ -165,8 +171,14 @@ ins_right({
 
 ins_right({
 	"location",
-	color = color_by_mode,
-	separator = { left = " ", right = "" },
+})
+
+ins_right({
+	function()
+		return "▊"
+	end,
+	color = { fg = colors.blue },
+	padding = { left = 0, right = 0 },
 })
 
 require("lualine").setup(config)

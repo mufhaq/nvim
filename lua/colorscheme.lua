@@ -9,7 +9,7 @@ function M.github()
 		comment_style = "italic",
 		hide_end_of_buffer = true,
 		sidebars = {},
-		theme_style = "dark_default",
+		theme_style = "dimmed",
 		dark_sidebar = true,
 		transparent = true,
 	})
@@ -20,7 +20,7 @@ function M.vscode()
 	require("vscode").setup({
 		italic_comments = true,
 		transparent = true,
-		disable_nvimtree_bg = false,
+		disable_nvimtree_bg = true,
 		color_overrides = {},
 		group_overrides = {
 			Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
