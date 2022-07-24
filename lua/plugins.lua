@@ -42,6 +42,11 @@ return require("packer").startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
-	use({ "kyazdani42/nvim-tree.lua" })
+	use({
+		"kyazdani42/nvim-tree.lua",
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+		},
+	})
 	use({ "projekt0n/github-nvim-theme" })
 end)
