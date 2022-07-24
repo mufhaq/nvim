@@ -4,16 +4,24 @@ function M.codedark()
 	vim.cmd([[ colo codedark ]])
 end
 
+function M.github()
+	require("github-theme").setup({
+		comment_style = "italic",
+		hide_end_of_buffer = true,
+		sidebars = {},
+		theme_style = "dimmed",
+		dark_sidebar = true,
+		transparent = false,
+	})
+end
+
 function M.vscode()
-	vim.cmd([[ colo vscode ]])
 	local c = require("vscode.colors")
 	require("vscode").setup({
-		transparent = false,
 		italic_comments = true,
+		transparent = false,
 		disable_nvimtree_bg = false,
-		color_overrides = {
-			--vscLineNumber = "#FFFFFF",
-		},
+		color_overrides = {},
 		group_overrides = {
 			Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
 		},
@@ -21,7 +29,6 @@ function M.vscode()
 end
 
 function M.onedark()
-	vim.cmd([[ colo vscode ]])
 	require("onedark").setup({
 		-- Main options --
 		style = "warmer", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
