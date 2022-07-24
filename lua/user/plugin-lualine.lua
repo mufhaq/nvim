@@ -1,7 +1,7 @@
 local colors = {
 	fg = "#161616",
-	--bg = "#121212",
-	bg = nil,
+	bg = "#121212",
+	--bg = nil,
 	white = "#ffffff",
 	black = "#161616",
 	red = "#f44747",

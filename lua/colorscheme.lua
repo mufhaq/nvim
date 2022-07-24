@@ -9,9 +9,9 @@ function M.github()
 		comment_style = "italic",
 		hide_end_of_buffer = true,
 		sidebars = {},
-		theme_style = "dimmed",
+		theme_style = "dark_default",
 		dark_sidebar = true,
-		transparent = false,
+		transparent = true,
 	})
 end
 
@@ -19,7 +19,7 @@ function M.vscode()
 	local c = require("vscode.colors")
 	require("vscode").setup({
 		italic_comments = true,
-		transparent = false,
+		transparent = true,
 		disable_nvimtree_bg = false,
 		color_overrides = {},
 		group_overrides = {
