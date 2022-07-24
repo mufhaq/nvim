@@ -7,7 +7,7 @@ require("nvim-tree").setup({
 				{ key = "u", action = "dir_up" },
 			},
 		},
-		width = "25%",
+		width = 30,
 		number = false,
 		relativenumber = false,
 		signcolumn = "no",
@@ -17,7 +17,7 @@ require("nvim-tree").setup({
 		group_empty = false,
 		full_name = false,
 		highlight_opened_files = "none",
-		indent_markers = {
+		indent_markers = { -- Subdir and Subfile are not aligned, waiting for next nvim-tree fix patch
 			enable = false,
 			icons = {
 				corner = "└",
