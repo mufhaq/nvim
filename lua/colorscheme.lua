@@ -16,16 +16,7 @@ function M.github()
 end
 
 function M.vscode()
-	local c = require("vscode.colors")
-	require("vscode").setup({
-		italic_comments = true,
-		transparent = true,
-		disable_nvimtree_bg = true,
-		color_overrides = {},
-		group_overrides = {
-			Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
-		},
-	})
+	vim.cmd([[ colo vscode ]])
 end
 
 function M.onedark()
