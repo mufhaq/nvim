@@ -16,6 +16,7 @@ require("user.plugin-impatient")
 require("user.plugin-colorizer")
 require("user.plugin-sniprun")
 require("user.plugin-nvim-tree")
+require("user.plugin-bufferline")
 require("colorscheme").vscode()
 
 -- keep this line at the very bottom
