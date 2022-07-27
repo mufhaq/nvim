@@ -1,4 +1,6 @@
-return {
+_G.icons = {}
+
+icons.kinds = {
 	Text = " ",
 	Method = " ",
 	Function = " ",
@@ -25,3 +27,5 @@ return {
 	Operator = " ",
 	TypeParameter = " ",
 }
+
+return icons

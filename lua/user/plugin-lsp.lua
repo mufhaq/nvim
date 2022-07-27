@@ -106,7 +106,7 @@ vim.diagnostic.config({
 })
 
 -- Icons for Native LSP
-local icons = require("icons")
+local icons = require("icons").kinds
 local kinds = vim.lsp.protocol.CompletionItemKind
 for i, kind in ipairs(kinds) do
 	kinds[i] = icons[kind] or kind
