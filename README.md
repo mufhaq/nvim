@@ -1,4 +1,5 @@
 # Neovim personal config
 
 -   #### Requirements:
-    -   [Custom Codicons Font](https://github.com/ChristianChiarulli/neovim-codicons)
+    -   Patched [Nerd Font](https://github.com/ryanoasis/nerd-fonts) or install from [AUR](https://aur.archlinux.org/packages/nerd-fonts-complete)
+    -   Custom [Codicons](https://github.com/ChristianChiarulli/neovim-codicons) Font
