@@ -140,6 +140,10 @@ ins_left({
 	always_visible = false,
 })
 
+ins_right(function()
+	return string.format("%s@%s", vim.fn.expand("$USER"), vim.fn.expand("$HOST"))
+end)
+
 ins_right({
 	"o:encoding",
 	cond = conditions.hide_in_width,
