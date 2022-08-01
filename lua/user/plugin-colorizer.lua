@@ -9,4 +9,5 @@ require("colorizer").setup({
 	"lua",
 	"c",
 	"cpp",
+	"css",
 })
