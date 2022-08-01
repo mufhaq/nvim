@@ -42,6 +42,7 @@ require("nvim-lsp-installer").setup({
 		"bashls",
 		"clangd",
 		"cssls",
+		"html",
 	},
 	automatic_installation = false,
 

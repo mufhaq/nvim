@@ -34,6 +34,9 @@ local config = {
 		always_divide_middle = true,
 		globalstatus = true,
 		disabled_filetypes = {},
+		refresh = {
+			statusline = 100, -- default: 1000
+		},
 		theme = {
 			normal = {
 				a = { bg = colors.bg },
