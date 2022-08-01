@@ -8,6 +8,7 @@ null_ls.setup({
 		formatting.gofmt,
 		formatting.prettier.with({
 			extra_args = { "--tab-width=4" },
+			extra_filetypes = { "php" }, -- with prettier/plugin-php npm
 			disabled_filetypes = {
 				"yaml",
 			},
@@ -17,9 +18,6 @@ null_ls.setup({
 			extra_args = { "--fast" },
 		}),
 		formatting.rustfmt,
-		formatting.phpcsfixer.with({
-			extra_args = { "--using-cache=no" },
-		}),
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
