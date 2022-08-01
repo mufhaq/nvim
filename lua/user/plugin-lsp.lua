@@ -41,6 +41,7 @@ require("nvim-lsp-installer").setup({
 		"intelephense",
 		"bashls",
 		"clangd",
+		"cssls",
 	},
 	automatic_installation = false,
 
