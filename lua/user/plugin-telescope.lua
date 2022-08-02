@@ -26,6 +26,14 @@ telescope.setup({
 			theme = "ivy",
 			hidden = true,
 		},
+		live_grep = {
+			theme = "ivy",
+			hidden = true,
+		},
+		buffers = {
+			theme = "ivy",
+			hidden = true,
+		},
 		grep_string = {
 			theme = "ivy",
 			hidden = true,
