@@ -10,7 +10,7 @@ require("nvim-tree").setup({
 		width = 30,
 		number = false,
 		relativenumber = false,
-		signcolumn = "no",
+		signcolumn = "yes",
 	},
 	renderer = {
 		add_trailing = false,
@@ -18,11 +18,11 @@ require("nvim-tree").setup({
 		full_name = false,
 		highlight_opened_files = "none",
 		indent_markers = { -- Subdir and Subfile are not aligned, waiting for next nvim-tree fix patch
-			enable = false,
+			enable = true,
 			icons = {
-				corner = "└",
+				corner = "╰─",
 				edge = "│",
-				item = "│",
+				item = "├─",
 				none = " ",
 			},
 		},
@@ -30,18 +30,17 @@ require("nvim-tree").setup({
 			webdev_colors = true,
 			git_placement = "before",
 			padding = " ",
+			symlink_arrow = " ➛ ",
 			show = {
 				file = true,
 				folder = true,
-				folder_arrow = true,
+				folder_arrow = false,
 				git = true,
 			},
 			glyphs = {
 				folder = {
 					arrow_open = "",
 					arrow_closed = "",
-					--arrow_open = "",
-					--arrow_closed = "",
 					default = "",
 					open = "",
 					empty = "",
