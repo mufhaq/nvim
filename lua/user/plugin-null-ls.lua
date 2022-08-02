@@ -18,6 +18,9 @@ null_ls.setup({
 			extra_args = { "--fast" },
 		}),
 		formatting.rustfmt,
+		formatting.clang_format.with({
+			extra_args = { "-style={IndentWidth: 4}" },
+		}),
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
