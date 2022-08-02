@@ -78,13 +78,14 @@ local function ls_prefix(name)
 	return string.format("user.language-server-settings.setting-%s", name)
 end
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local function extend(ls)
+local default_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local function extend(ls, capabilities)
+	capabilities = capabilities or default_capabilities
 	local req = require(ls_prefix(ls))
 	return vim.tbl_deep_extend("force", req, {
 		on_attach = on_attach,
 		flags = {
-			debounce_text_changes = 150, -- default
+			debounce_text_changes = 150, -- default: 150
 		},
 		capabilities = capabilities,
 	})
@@ -93,7 +94,8 @@ end
 local server_list = require("nvim-lsp-installer").get_installed_servers()
 local nvim_lsp = require("lspconfig")
 for _, lsp in ipairs(server_list) do
-	nvim_lsp[lsp.name].setup(extend(lsp.name))
+	local configs = extend(lsp.name)
+	nvim_lsp[lsp.name].setup(configs)
 end
 
 -- Other Settings
