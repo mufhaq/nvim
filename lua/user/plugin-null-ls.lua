@@ -7,7 +7,7 @@ null_ls.setup({
 	sources = {
 		formatting.gofmt,
 		formatting.prettier.with({
-			extra_args = { "--tab-width=4" },
+			extra_args = { "--tab-width=4", "--print-width=80" },
 			extra_filetypes = { "php" }, -- with prettier/plugin-php npm
 			disabled_filetypes = {
 				"yaml",
