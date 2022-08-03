@@ -2,6 +2,7 @@
 vim.cmd([[ 
     syntax on
     filetype indent on
+    filetype plugin indent on
 ]])
 vim.cmd([[ 
     let NERDTreeShowHidden=1

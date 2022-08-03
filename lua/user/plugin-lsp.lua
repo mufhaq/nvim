@@ -43,6 +43,7 @@ require("nvim-lsp-installer").setup({
 		"clangd",
 		"cssls",
 		"emmet_ls",
+		--"html",
 		"jdtls",
 	},
 	automatic_installation = false,
