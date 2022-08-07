@@ -100,7 +100,7 @@ for _, lsp in ipairs(server_list) do
 
 	if lsp.name == "clangd" then
 		default_capabilities.offsetEncoding = "utf-8"
-		configs = extend(lsp.name, default_capabilities)
+		configs = extend(lsp.name)
 	else
 		configs = extend(lsp.name)
 	end
