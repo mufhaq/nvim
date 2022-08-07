@@ -37,5 +37,6 @@ vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.clipboard = "unnamedplus"
 
 -- global
