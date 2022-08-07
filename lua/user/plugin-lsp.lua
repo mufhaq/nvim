@@ -96,7 +96,15 @@ end
 local server_list = require("nvim-lsp-installer").get_installed_servers()
 local nvim_lsp = require("lspconfig")
 for _, lsp in ipairs(server_list) do
-	local configs = extend(lsp.name)
+	local configs = nil
+
+	if lsp.name == "clangd" then
+		default_capabilities.offsetEncoding = "utf-8"
+		configs = extend(lsp.name, default_capabilities)
+	else
+		configs = extend(lsp.name)
+	end
+
 	nvim_lsp[lsp.name].setup(configs)
 end
 
