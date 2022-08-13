@@ -34,6 +34,7 @@ vim.opt.so = 5
 vim.opt.termguicolors = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.wrap = false
+vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
 vim.opt.linebreak = true
