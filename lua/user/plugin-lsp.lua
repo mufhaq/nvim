@@ -83,7 +83,15 @@ end
 local default_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local function extend(ls, capabilities)
 	capabilities = capabilities or default_capabilities
-	local req = require(ls_prefix(ls))
+	local req = nil
+	local ok, value = pcall(require, ls_prefix(ls))
+
+	if ok then
+		req = value
+	else
+		req = {}
+	end
+
 	return vim.tbl_deep_extend("force", req, {
 		on_attach = on_attach,
 		flags = {
