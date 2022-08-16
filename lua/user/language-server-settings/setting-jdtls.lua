@@ -2,9 +2,9 @@ return {
 	cmd = {
 		"jdtls",
 		"-configuration",
-		"/home/runner/.cache/jdtls/config",
+		"/home/haq/.cache/jdtls/config",
 		"-data",
-		"/home/runner/.cache/jdtls/workspace",
+		"/home/haq/.cache/jdtls/workspace",
 	},
 	filetypes = { "java" },
 	init_options = {
