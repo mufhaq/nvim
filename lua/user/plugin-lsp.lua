@@ -77,7 +77,7 @@ require("nvim-lsp-installer").setup({
 })
 
 local function ls_prefix(name)
-	return string.format("user.language-server-settings.setting-%s", name)
+	return string.format("user.language-server-settings.server-%s", name)
 end
 
 local default_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
