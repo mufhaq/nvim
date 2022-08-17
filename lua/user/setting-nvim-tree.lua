@@ -7,17 +7,24 @@ require("nvim-tree").setup({
 				{ key = "u", action = "dir_up" },
 			},
 		},
-		width = 30,
+		width = 40,
 		number = false,
 		relativenumber = false,
-		signcolumn = "no",
+		signcolumn = "yes",
 	},
+    git = {
+        enable = true,
+        ignore = false,
+        show_on_dirs = true,
+        timeout = 400,
+    },
 	renderer = {
-		add_trailing = false,
-		group_empty = false,
+		add_trailing = true,
+		group_empty = true,
 		full_name = false,
 		highlight_opened_files = "none",
-		indent_markers = { -- Subdir and Subfile are not aligned, waiting for next nvim-tree fix patch
+		root_folder_modifier = ":t",
+		indent_markers = {
 			enable = true,
 			icons = {
 				corner = "└",
@@ -59,7 +66,7 @@ require("nvim-tree").setup({
 		},
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 	},
 	diagnostics = {
 		enable = true,

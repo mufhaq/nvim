@@ -25,18 +25,22 @@ telescope.setup({
 		find_files = {
 			theme = "ivy",
 			hidden = true,
+			no_ignore = false,
 		},
 		live_grep = {
 			theme = "ivy",
 			hidden = true,
+			no_ignore = false,
 		},
 		buffers = {
 			theme = "ivy",
 			hidden = true,
+			no_ignore = false,
 		},
 		grep_string = {
 			theme = "ivy",
 			hidden = true,
+			no_ignore = false,
 		},
 	},
 	extensions = {
