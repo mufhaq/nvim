@@ -27,9 +27,9 @@ require("nvim-lsp-installer").setup({
 		check_outdated_servers_on_open = true,
 		border = "none",
 		icons = {
-			server_installed = "◍",
-			server_pending = "◍",
-			server_uninstalled = "◍",
+			server_installed = "◍ ",
+			server_pending = "◍ ",
+			server_uninstalled = "◍ ",
 		},
 		keymaps = {
 			toggle_server_expand = "<CR>",
