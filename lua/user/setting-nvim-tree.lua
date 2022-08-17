@@ -19,7 +19,7 @@ require("nvim-tree").setup({
         timeout = 400,
     },
 	renderer = {
-		add_trailing = true,
+		add_trailing = false,
 		group_empty = true,
 		full_name = false,
 		highlight_opened_files = "none",
