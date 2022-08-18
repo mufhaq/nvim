@@ -12,12 +12,12 @@ require("nvim-tree").setup({
 		relativenumber = false,
 		signcolumn = "yes",
 	},
-    git = {
-        enable = true,
-        ignore = false,
-        show_on_dirs = true,
-        timeout = 400,
-    },
+	git = {
+		enable = true,
+		ignore = false,
+		show_on_dirs = true,
+		timeout = 400,
+	},
 	renderer = {
 		add_trailing = false,
 		group_empty = true,
