@@ -17,6 +17,7 @@ return require("packer").startup(function(use)
 	})
 	use("j-hui/fidget.nvim")
 	use("mfussenegger/nvim-jdtls")
+	use("simrat39/rust-tools.nvim")
 
 	-- CMP
 	use("hrsh7th/cmp-nvim-lsp")

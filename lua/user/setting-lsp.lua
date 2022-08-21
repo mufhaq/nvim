@@ -6,21 +6,23 @@ vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 
 local on_attach = require("user.language-server-settings.handler").on_attach
 
+local servers = {
+	"sumneko_lua",
+	"gopls",
+	"tsserver",
+	"pyright",
+	"rust_analyzer",
+	"intelephense",
+	"bashls",
+	"clangd",
+	"cssls",
+	"emmet_ls",
+	--"html",
+	"jdtls",
+}
+
 require("nvim-lsp-installer").setup({
-	ensure_installed = {
-		"sumneko_lua",
-		"gopls",
-		"tsserver",
-		"pyright",
-		"rust_analyzer",
-		"intelephense",
-		"bashls",
-		"clangd",
-		"cssls",
-		"emmet_ls",
-		--"html",
-		"jdtls",
-	},
+	ensure_installed = servers,
 	automatic_installation = false,
 
 	ui = {
@@ -55,7 +57,7 @@ local function ls_prefix(name)
 	return string.format("user.language-server-settings.server-%s", name)
 end
 
-local default_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local default_capabilities = require("user.language-server-settings.handler").default_capabilities
 local function extend(ls, capabilities)
 	capabilities = capabilities or default_capabilities
 	local req = nil
@@ -76,21 +78,25 @@ local function extend(ls, capabilities)
 	})
 end
 
-local server_list = require("nvim-lsp-installer").get_installed_servers()
 local nvim_lsp = require("lspconfig")
-for _, lsp in ipairs(server_list) do
+for _, lsp in pairs(servers) do
 	local configs = nil
 
-	if lsp.name == "clangd" then
+	if lsp == "clangd" then
 		default_capabilities.offsetEncoding = "utf-8"
-		configs = extend(lsp.name)
-	elseif lsp.name == "jdtls" then
+		configs = extend(lsp)
+	elseif lsp == "jdtls" then
+		goto skip
+	elseif lsp == "rust_analyzer" then
+		local rust_tools = require("rust-tools")
+		local rust_tools_opts = require("user.language-server-settings.server-rust_tools")
+		rust_tools.setup(rust_tools_opts)
 		goto skip
 	else
-		configs = extend(lsp.name)
+		configs = extend(lsp)
 	end
 
-	nvim_lsp[lsp.name].setup(configs)
+	nvim_lsp[lsp].setup(configs)
 	::skip::
 end
 
