@@ -7,8 +7,8 @@ require("bufferline").setup({
 		left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
 		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
 		indicator = {
-			icon = "", -- this should be omitted if indicator style is not 'icon', default: ▎
-			style = "underline", -- default: 'icon'
+			icon = "▎", -- this should be omitted if indicator style is not 'icon', default: ▎
+			style = "icon", -- default: 'icon'
 		},
 		buffer_close_icon = "",
 		modified_icon = "●",
