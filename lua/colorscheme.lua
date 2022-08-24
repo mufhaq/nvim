@@ -19,13 +19,12 @@ end
 
 function M.vscode()
 	vim.cmd([[ colo vscode ]])
-	--hl(0, "BufferLineFill", { bg = "#1e1e1e" })
-	--hl(0, "BufferLineIndicatorSelected", { fg = "#0a7aca" })
-	--hl(0, "BufferLineTabSelected", {})
-	--hl(0, "BufferLineCloseButton", { bg = "#1e1e1e" })
-	--hl(0, "BufferLineCloseButtonSelected", { bg = "#1e1e1e", bold = false })
-	--hl(0, "BufferLineBackground", { bg = "#1e1e1e" })
-	--hl(0, "BufferLineBufferSelected", { bold = false })
+	hl(0, "BufferLineFill", { bg = "#1e1e1e" })
+	hl(0, "BufferLineIndicatorSelected", { fg = "#0a7aca" })
+	hl(0, "BufferLineTabSelected", {})
+	hl(0, "BufferLineCloseButton", { bg = "#1e1e1e" })
+	hl(0, "BufferLineCloseButtonSelected", { bg = "#1e1e1e", bold = false })
+	hl(0, "BufferLineBackground", { bg = "#1e1e1e" })
 end
 
 function M.onedark()
