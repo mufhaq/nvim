@@ -1,3 +1,4 @@
+vim.g["indent_blankline_viewport_buffer"] = 1000
 vim.opt.list = true
 --vim.opt.listchars:append({ eol = "↴" })
 --vim.opt.listchars:append(space = "⋅")
