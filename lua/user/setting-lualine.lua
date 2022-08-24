@@ -145,7 +145,7 @@ ins_left({
 
 ins_right({
 	function()
-		local username = vim.fn.expand("$USER")
+		local username = os.getenv("USER")
 		local hostname = vim.fn.hostname()
 		return string.format("%s@%s", username, hostname)
 	end,
