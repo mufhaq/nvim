@@ -25,6 +25,7 @@ function M.vscode()
 	hl(0, "BufferLineCloseButton", { bg = "#1e1e1e" })
 	hl(0, "BufferLineCloseButtonSelected", { bg = "#1e1e1e", bold = false })
 	hl(0, "BufferLineBackground", { bg = "#1e1e1e" })
+	hl(0, "BufferLineBufferSelected", { bold = false })
 end
 
 function M.onedark()
