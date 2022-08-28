@@ -21,36 +21,41 @@ local servers = {
 	"jdtls",
 }
 
-require("nvim-lsp-installer").setup({
-	ensure_installed = servers,
-	automatic_installation = false,
-
+require("mason").setup({
 	ui = {
-		check_outdated_servers_on_open = true,
-		border = "none",
+		check_oudated_packages_on_open = true,
+		border = nil,
 		icons = {
-			server_installed = "◍ ",
-			server_pending = "◍ ",
-			server_uninstalled = "◍ ",
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
 		},
 		keymaps = {
-			toggle_server_expand = "<CR>",
-			install_server = "i",
-			update_server = "u",
-			check_server_version = "c",
-			update_all_servers = "U",
-			check_outdated_servers = "C",
-			uninstall_server = "X",
+			toggle_package_expand = "<CR>",
+			install_package = "i",
+			update_package = "u",
+			check_package_version = "c",
+			update_all_packages = "U",
+			check_outdated_packages = "C",
+			uninstall_package = "X",
+			cancel_installation = "<C-c>",
+			apply_language_filter = "<C-f>",
 		},
 	},
+	--install_root_dir = path.concat { vim.fn.stdpath "data", "mason" },
 	pip = {
 		install_args = {},
 	},
-	log_level = vim.log.levels.DEBUG,
+	log_level = vim.log.levels.INFO,
 	max_concurrent_installers = 4,
 	github = {
 		download_url_template = "https://github.com/%s/releases/download/%s/%s",
 	},
+})
+
+require("mason-lspconfig").setup({
+	ensure_installed = servers,
+	automatic_installation = false,
 })
 
 local function ls_prefix(name)
