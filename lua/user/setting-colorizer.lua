@@ -10,4 +10,5 @@ require("colorizer").setup({
 	"c",
 	"cpp",
 	"css",
+	"tmux",
 })
