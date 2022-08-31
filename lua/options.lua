@@ -1,13 +1,3 @@
---vim.cmd([[ hi Normal guibg=none guifg=white ctermbg=none ctermfg=white ]])
-vim.cmd([[ 
-    syntax on
-    filetype plugin indent on
-]])
-vim.cmd([[ 
-    let NERDTreeShowHidden=1
-    let $FZF_DEFAULT_COMMAND="find . ! -path '*.git*' ! -path '*node_modules*'"
-]])
-
 vim.o.background = "dark"
 
 vim.opt.relativenumber = true
