@@ -15,7 +15,7 @@ null_ls.setup({
 		}),
 		formatting.stylua,
 		formatting.black.with({
-			extra_args = { "--fast" },
+			extra_args = { "--fast", "--line-length=80" },
 		}),
 		formatting.rustfmt,
 		formatting.clang_format.with({
