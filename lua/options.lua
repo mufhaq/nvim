@@ -1,7 +1,6 @@
 --vim.cmd([[ hi Normal guibg=none guifg=white ctermbg=none ctermfg=white ]])
 vim.cmd([[ 
     syntax on
-    filetype indent on
     filetype plugin indent on
 ]])
 vim.cmd([[ 
