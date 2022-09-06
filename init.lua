@@ -18,6 +18,7 @@ require("user.setting-sniprun")
 require("user.setting-nvim-tree")
 require("user.setting-bufferline")
 require("user.setting-comment")
+require("user.setting-autopairs")
 require("colorscheme").vscode()
 
 -- keep this line at the very bottom
