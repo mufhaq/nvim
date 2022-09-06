@@ -19,6 +19,7 @@ local servers = {
 	"emmet_ls",
 	--"html",
 	"jdtls",
+	"omnisharp",
 }
 
 require("mason").setup({
