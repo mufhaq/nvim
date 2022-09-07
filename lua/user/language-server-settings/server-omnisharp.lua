@@ -1,5 +1,8 @@
 return {
-	cmd = { "dotnet", "/home/haq/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" },
+	cmd = {
+		"dotnet",
+		string.format("%s/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll", os.getenv("HOME")),
+	},
 
 	-- Enables support for reading code style, naming convention and analyzer
 	-- settings from .editorconfig.
