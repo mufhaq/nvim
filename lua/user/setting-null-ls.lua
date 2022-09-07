@@ -29,8 +29,8 @@ null_ls.setup({
 	},
 	on_attach = function(client, bufnr)
 		-- Format On Save
-		for index = 1, #filetype_exclude do
-			if client.supports_method("textDocument/formatting") then
+		if client.supports_method("textDocument/formatting") then
+			for index = 1, #filetype_exclude do
 				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					group = augroup,
