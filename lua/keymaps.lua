@@ -28,10 +28,14 @@ keymap("n", "<leader>s", require("telescope.builtin").grep_string, opts)
 keymap("n", "<leader>f", require("telescope").extensions.file_browser.file_browser, opts)
 
 -- Sniprun
-keymap("n", "<F5>", functions.sniprun, opts)
-keymap("n", "<F6>", ":SnipClose<cr>", opts)
-keymap("v", "<F5>", ":'<,'>SnipRun<cr>", opts)
-keymap("v", "<F6>", ":SnipClose<cr>", opts)
+--keymap("n", "<F5>", functions.sniprun, opts)
+--keymap("n", "<F6>", ":SnipClose<cr>", opts)
+--keymap("v", "<F5>", ":'<,'>SnipRun<cr>", opts)
+--keymap("v", "<F6>", ":SnipClose<cr>", opts)
 
 -- Nvim-Tree
 keymap("n", "<C-\\>", ":NvimTreeToggle<cr>", opts)
+
+-- code_runner
+keymap("n", "<F5>", ":RunCode<CR>", opts)
+keymap("n", "<F6>", ":RunFile<CR>", opts)

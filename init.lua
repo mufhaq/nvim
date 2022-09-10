@@ -14,11 +14,12 @@ require("user.setting-fidget")
 require("user.setting-indent-blankline")
 require("user.setting-impatient")
 require("user.setting-colorizer")
-require("user.setting-sniprun")
+--require("user.setting-sniprun")
 require("user.setting-nvim-tree")
 require("user.setting-bufferline")
 require("user.setting-comment")
 require("user.setting-autopairs")
+require("user.setting-code_runner")
 require("colorscheme").vscode()
 
 -- keep this line at the very bottom
