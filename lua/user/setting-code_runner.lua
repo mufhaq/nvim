@@ -1,9 +1,9 @@
 require("code_runner").setup({
 	mode = "term",
-	focus = true,
-	startinsert = true,
+	focus = false,
+	startinsert = false,
 	term = {
-		position = "bot",
+		position = "belowright",
 		size = 20,
 	},
 	filetype_path = vim.fn.expand("~/.config/nvim/code_runner.json"),

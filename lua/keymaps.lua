@@ -39,3 +39,4 @@ keymap("n", "<C-\\>", ":NvimTreeToggle<cr>", opts)
 -- code_runner
 keymap("n", "<F5>", ":RunCode<CR>", opts)
 keymap("n", "<F6>", ":RunFile<CR>", opts)
+keymap("n", "<F7>", ":RunClose<CR>", opts)
