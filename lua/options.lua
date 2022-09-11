@@ -21,6 +21,7 @@ vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.so = 5
 vim.opt.splitright = true
+vim.opt.scrollback = 1
 vim.opt.termguicolors = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.colorcolumn = "80"

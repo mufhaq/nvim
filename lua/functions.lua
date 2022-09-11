@@ -18,4 +18,9 @@ function M.user.sniprun()
     ]])
 end
 
+function M.user.closerunner()
+	vim.cmd("SnipClose")
+	vim.cmd("RunClose")
+end
+
 return M

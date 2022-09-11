@@ -3,6 +3,6 @@ require("sniprun").setup({
 		"Terminal",
 	},
 	display_options = {
-		terminal_width = 55,
+		terminal_width = 65,
 	},
 })
