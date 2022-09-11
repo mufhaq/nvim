@@ -11,13 +11,17 @@ local opts = { noremap = true, silent = true }
 --  command_mode        = 'c'
 
 -- Neovim
+-- Tab
+keymap({ "n", "i", "c" }, "<C-PageUp>", "<CMD>BufferLineCyclePrev<CR>", opts)
+keymap({ "n", "i", "c" }, "<C-PageDown>", "<CMD>BufferLineCycleNext<CR>", opts)
+
 -- Open Link
 if vim.fn.has("mac") == 1 then
-	keymap("n", "gx", '<Cmd>call jobstart(["open", expand("<cfile>")], {"detach": v:true})<CR>', opts)
+	keymap("n", "gx", '<CMD>call jobstart(["open", expand("<cfile>")], {"detach": v:true})<CR>', opts)
 elseif vim.fn.has("unix") == 1 then
-	keymap("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', opts)
+	keymap("n", "gx", '<CMD>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', opts)
 else
-	keymap("n", "gx", '<Cmd>lua print("Error: gx is not supported on this OS!")<CR>', opts)
+	keymap("n", "gx", '<CMD>lua print("Error: gx is not supported on this OS!")<CR>', opts)
 end
 
 -- Telescope
@@ -29,13 +33,13 @@ keymap("n", "<leader>f", require("telescope").extensions.file_browser.file_brows
 
 -- Sniprun
 keymap("n", "<F5>", functions.sniprun, opts)
-keymap("n", "<F6>", ":SnipClose<cr>", opts)
---keymap("v", "<F5>", ":'<,'>SnipRun<cr>", opts)
---keymap("v", "<F6>", ":SnipClose<cr>", opts)
+keymap("n", "<F6>", "<CMD>SnipClose<CR>", opts)
+--keymap("v", "<F5>", "<CMD>'<,'>SnipRun<cr>", opts)
+--keymap("v", "<F6>", "<CMD>SnipClose<cr>", opts)
 
 -- Nvim-Tree
-keymap("n", "<C-\\>", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<C-\\>", "<CMD>NvimTreeToggle<cr>", opts)
 
 -- code_runner
---keymap("n", "<F5>", ":RunFile<CR>", opts)
+--keymap("n", "<F5>", "<CMD>RunFile<CR>", opts)
 --keymap("n", "<F6>", functions.closerunner, opts)
