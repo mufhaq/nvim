@@ -74,5 +74,8 @@ require("bufferline").setup({
 		separator_style = { "", "" },
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
+		sort_by = function(buf_a, buf_b)
+			return buf_a.ordinal < buf_b.ordinal
+		end,
 	},
 })
