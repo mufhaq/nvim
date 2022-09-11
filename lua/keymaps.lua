@@ -12,8 +12,10 @@ local opts = { noremap = true, silent = true }
 
 -- Neovim
 -- Tab
-keymap({ "n", "i", "c" }, "<C-PageUp>", "<CMD>BufferLineCyclePrev<CR>", opts)
-keymap({ "n", "i", "c" }, "<C-PageDown>", "<CMD>BufferLineCycleNext<CR>", opts)
+keymap({ "n", "i", "c" }, "<C-l>", "<CMD>tabnext<CR>", opts)
+keymap({ "n", "i", "c" }, "<C-h>", "<CMD>tabprevious<CR>", opts)
+keymap({ "n", "i", "c" }, "<C-S-l>", "<CMD>tabm +1<CR>", opts)
+keymap({ "n", "i", "c" }, "<C-S-h>", "<CMD>tabm -1<CR>", opts)
 
 -- Open Link
 if vim.fn.has("mac") == 1 then
