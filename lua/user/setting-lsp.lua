@@ -20,6 +20,7 @@ local servers = {
 	--"html",
 	"jdtls",
 	"omnisharp",
+	"jsonls",
 }
 
 require("mason").setup({
