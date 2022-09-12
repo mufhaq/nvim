@@ -7,13 +7,17 @@ null_ls.setup({
 	sources = {
 		formatting.gofmt,
 		formatting.prettier.with({
-			extra_args = { "--tab-width=4", "--print-width=80" },
+			extra_args = function()
+				local args = {}
+				if vim.bo.filetype == "json" or vim.bo.filetype == "jsonc" or vim.bo.filetype == "yaml" then
+					table.insert(args, 1, "--tab-width=2")
+				else
+					table.insert(args, 1, "--tab-width=4")
+				end
+				table.insert(args, 1, "--print-width=80")
+				return args
+			end,
 			extra_filetypes = { "php" }, -- with prettier/plugin-php npm
-			disabled_filetypes = {
-				"yaml",
-				"json",
-				"jsonc",
-			},
 		}),
 		formatting.stylua,
 		formatting.black.with({
