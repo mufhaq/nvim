@@ -15,6 +15,8 @@ require("nvim-treesitter.configs").setup({
 		"html",
 		"dockerfile",
 		"bash",
+		"json",
+		"yaml",
 	},
 	sync_install = false, -- Install parsers synchronously (only applied to 'ensure_installed')
 	ignore_install = { "" }, -- List of parsers to ignore installing (for "all")
@@ -25,6 +27,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "html" },
+		disable = { "html", "yaml" },
 	},
 })
