@@ -14,7 +14,7 @@ return {
 		},
 		yaml = {
 			schemas = {
-				["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "/*docker-compose.*",
+				[string.format("file:///home/%s/.config/nvim/schemas/compose-spec.json")] = "/*docker-compose.*",
 			},
 		},
 	},
