@@ -11,6 +11,8 @@ null_ls.setup({
 			extra_filetypes = { "php" }, -- with prettier/plugin-php npm
 			disabled_filetypes = {
 				"yaml",
+				"json",
+				"jsonc",
 			},
 		}),
 		formatting.stylua,

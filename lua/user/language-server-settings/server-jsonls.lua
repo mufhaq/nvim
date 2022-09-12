@@ -13,11 +13,11 @@ return {
 			schemas = {
 				{
 					fileMatch = { "package.json" },
-					url = "https://json.schemastore.org/package.json",
+					url = string.format("file:///home/%s/.config/nvim/schemas/package.json", vim.g.USER),
 				},
 				{
 					fileMatch = { "tsconfig.json" },
-					url = "https://json.schemastore.org/tsconfig.json",
+					url = string.format("file:///home/%s/.config/nvim/schemas/tsconfig.json", vim.g.USER),
 				},
 			},
 		},

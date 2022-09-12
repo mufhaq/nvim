@@ -16,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"dockerfile",
 		"bash",
 		"json",
+		"jsonc",
 		"yaml",
 	},
 	sync_install = false, -- Install parsers synchronously (only applied to 'ensure_installed')
