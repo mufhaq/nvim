@@ -20,6 +20,10 @@ return {
 					url = string.format("file:///home/%s/.config/nvim/schemas/tsconfig.json", vim.g.USER),
 				},
 				{
+					fileMatch = { "jsconfig.json" },
+					url = string.format("file:///home/%s/.config/nvim/schemas/jsconfig.json", vim.g.USER),
+				},
+				{
 					fileMatch = { "composer.json" },
 					url = string.format("file:///home/%s/.config/nvim/schemas/composer.json", vim.g.USER),
 				},
