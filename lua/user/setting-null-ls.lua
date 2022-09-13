@@ -14,7 +14,7 @@ null_ls.setup({
 				else
 					table.insert(args, 1, "--tab-width=4")
 				end
-				table.insert(args, 1, "--print-width=80")
+				table.insert(args, 2, "--print-width=80")
 				return args
 			end,
 			extra_filetypes = { "php" }, -- with prettier/plugin-php npm
