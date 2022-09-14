@@ -27,6 +27,10 @@ return {
 					fileMatch = { "composer.json" },
 					url = string.format("file:///home/%s/.config/nvim/schemas/composer.json", vim.g.USER),
 				},
+				{
+					fileMatch = { "openapi.json" },
+					url = string.format("file:///home/%s/.config/nvim/schemas/openapi.json", vim.g.USER),
+				},
 			},
 		},
 	},
