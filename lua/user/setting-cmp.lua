@@ -92,6 +92,9 @@ cmp.setup({
 	preselect = cmp.PreselectMode.None, -- Default: cmp.PreselectMode.Item
 })
 
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
 -- Set configuration for specific filetype.
 cmp.setup.filetype("gitcommit", {
 	sources = cmp.config.sources({
