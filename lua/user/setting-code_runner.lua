@@ -3,8 +3,8 @@ require("code_runner").setup({
 	focus = false,
 	startinsert = false,
 	term = {
-		position = "vert",
-		size = 65,
+		position = "bot",
+		size = 20,
 	},
 	filetype_path = vim.fn.expand("~/.config/nvim/code_runner.json"),
 	project_path = vim.fn.expand("~/.config/nvim/project_manager.json"),
