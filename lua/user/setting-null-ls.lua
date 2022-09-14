@@ -41,6 +41,10 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
+					local function format()
+						vim.lsp.buf.formatting_sync()
+					end
+
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 					if #excluded_files > 0 then
 						for _, k in pairs(excluded_files) do
@@ -48,11 +52,11 @@ null_ls.setup({
 								goto skip
 								break
 							else
-								vim.lsp.buf.formatting_sync()
+								format()
 							end
 						end
 					else
-						vim.lsp.buf.formatting_sync()
+						format()
 					end
 
 					::skip::
