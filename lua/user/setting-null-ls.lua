@@ -45,19 +45,26 @@ null_ls.setup({
 						vim.lsp.buf.formatting_sync()
 					end
 
+					local isFormat = nil
+
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 					if #excluded_files > 0 then
 						for _, k in pairs(excluded_files) do
 							if k == vim.bo.filetype then
-								goto skip
+								isFormat = false
 								break
 							else
-								format()
-								break
+								isFormat = true
 							end
 						end
 					else
+						isFormat = true
+					end
+
+					if isFormat then
 						format()
+					else
+						goto skip
 					end
 
 					::skip::
