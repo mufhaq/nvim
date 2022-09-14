@@ -11,7 +11,7 @@ local excluded_files = {
 null_ls.setup({
 	sources = {
 		formatting.gofmt,
-		formatting.prettier.with({
+		formatting.prettierd.with({
 			extra_args = function()
 				local args = {}
 				if vim.bo.filetype == "json" or vim.bo.filetype == "jsonc" or vim.bo.filetype == "yaml" then
@@ -41,31 +41,20 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					local file = nil
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 					if #excluded_files > 0 then
 						for _, k in pairs(excluded_files) do
-							if vim.bo.filetype ~= k then
-								-- vim.lsp.buf.formatting_sync()
-								file = vim.bo.filetype
+							if k == vim.bo.filetype then
+								goto skip
+								break
+							else
+								vim.lsp.buf.formatting_sync()
 							end
 						end
 					else
-						goto format
+						vim.lsp.buf.formatting_sync()
 					end
 
-					if file ~= nil then
-						if file == vim.bo.filetype then
-							goto format
-						else
-							goto skip
-						end
-					else
-						goto skip
-					end
-
-					::format::
-					vim.lsp.buf.formatting_sync()
 					::skip::
 				end,
 			})
