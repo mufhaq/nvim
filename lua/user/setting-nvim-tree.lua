@@ -1,5 +1,5 @@
 require("nvim-tree").setup({
-	sort_by = "extension",
+	sort_by = "name",
 	view = {
 		adaptive_size = false,
 		mappings = {

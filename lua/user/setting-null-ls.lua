@@ -3,6 +3,11 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+local excluded_files = {
+	"c",
+	"cpp",
+}
+
 null_ls.setup({
 	sources = {
 		formatting.gofmt,
@@ -28,18 +33,42 @@ null_ls.setup({
 			extra_args = { "-style={IndentWidth: 4}" },
 		}),
 	},
-	-- on_attach = function(client, bufnr)
-	-- 	-- Format On Save
-	-- 	if client.supports_method("textDocument/formatting") then
-	-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 			group = augroup,
-	-- 			buffer = bufnr,
-	-- 			callback = function()
-	-- 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-	-- 				vim.lsp.buf.formatting_sync()
-	-- 			end,
-	-- 		})
-	-- 	end
-	-- end,
+	on_attach = function(client, bufnr)
+		-- Format On Save
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					local file = nil
+					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+					if #excluded_files > 0 then
+						for _, k in pairs(excluded_files) do
+							if vim.bo.filetype ~= k then
+								-- vim.lsp.buf.formatting_sync()
+								file = vim.bo.filetype
+							end
+						end
+					else
+						goto format
+					end
+
+					if file ~= nil then
+						if file == vim.bo.filetype then
+							goto format
+						else
+							goto skip
+						end
+					else
+						goto skip
+					end
+
+					::format::
+					vim.lsp.buf.formatting_sync()
+					::skip::
+				end,
+			})
+		end
+	end,
 })
