@@ -10,27 +10,17 @@ return {
 	single_file_support = true,
 	settings = {
 		json = {
-			schemas = {
-				{
-					fileMatch = { "package.json" },
-					url = string.format("file:///home/%s/.config/nvim/schemas/package.json", vim.g.USER),
+			schemas = require("schemastore").json.schemas({
+				select = {
+					"package.json",
+					"tsconfig.json",
+					"jsconfig.json",
+					"composer.json",
+					"openapi.json",
 				},
-				{
-					fileMatch = { "tsconfig.json" },
-					url = string.format("file:///home/%s/.config/nvim/schemas/tsconfig.json", vim.g.USER),
-				},
-				{
-					fileMatch = { "jsconfig.json" },
-					url = string.format("file:///home/%s/.config/nvim/schemas/jsconfig.json", vim.g.USER),
-				},
-				{
-					fileMatch = { "composer.json" },
-					url = string.format("file:///home/%s/.config/nvim/schemas/composer.json", vim.g.USER),
-				},
-				{
-					fileMatch = { "openapi.json" },
-					url = string.format("file:///home/%s/.config/nvim/schemas/openapi.json", vim.g.USER),
-				},
+			}),
+			validate = {
+				enable = true,
 			},
 		},
 	},

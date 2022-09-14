@@ -13,8 +13,9 @@ return {
 			},
 		},
 		yaml = {
-			schemas = {
-				[string.format("file:///home/%s/.config/nvim/schemas/compose-spec.json")] = "/*docker-compose.*",
+			schemaStore = {
+				enable = true,
+				url = "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/api/json/catalog.json",
 			},
 		},
 	},
