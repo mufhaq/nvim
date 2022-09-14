@@ -53,6 +53,7 @@ null_ls.setup({
 								break
 							else
 								format()
+								break
 							end
 						end
 					else
