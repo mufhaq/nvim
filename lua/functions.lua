@@ -2,7 +2,7 @@ _G.M = {}
 
 function M.init()
 	vim.cmd([[
-    function SnipRun()
+    function! SnipRun()
         let caret = winsaveview()
         %SnipRun
         call winrestview(caret)
