@@ -21,7 +21,7 @@ require("user.setting-bufferline")
 require("user.setting-comment")
 require("user.setting-autopairs")
 require("user.setting-code_runner")
-require("colorscheme").vscode()
+require("colorschemes").vscode()
 
 -- keep this line at the very bottom
 require("functions").init()
