@@ -5,11 +5,6 @@ local util = vim.lsp.util
 local handlers = vim.lsp.handlers
 
 local location_callback = function(_, method, _)
-	local file = io.open("output2", "w+")
-	if file ~= nil then
-		file:write(vim.inspect(method[1]))
-	end
-
 	api.nvim_command("tabnew")
 	util.jump_to_location(method[1], "utf-8")
 end
