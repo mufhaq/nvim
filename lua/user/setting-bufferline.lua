@@ -31,8 +31,8 @@ require("bufferline").setup({
 		diagnostics = "nvim_lsp",
 		diagnostics_update_in_insert = true,
 		-- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
-		diagnostics_indicator = function(count, level, diagnostics_dict, context)
-			return "(" .. count .. ")"
+		diagnostics_indicator = function(count, level, _, _)
+			return "(" .. count .. " " .. level .. ")"
 		end,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
 		custom_filter = function(buf_number, buf_numbers)
