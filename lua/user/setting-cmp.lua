@@ -7,6 +7,11 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 local compare = require("cmp.config.compare")
 
+luasnip.config.setup({
+	region_check_events = "CursorHold,InsertLeave",
+	delete_check_events = "TextChanged,InsertEnter",
+})
+
 cmp.setup({
 	enabled = function()
 		local in_prompt = vim.api.nvim_buf_get_option(0, "buftype") == "prompt"
