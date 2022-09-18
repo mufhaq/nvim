@@ -5,7 +5,11 @@ local util = vim.lsp.util
 local handlers = vim.lsp.handlers
 
 local location_callback = function(_, method, result)
-	if method[1]["uri"] == result["params"]["textDocument"]["uri"] then
+	if
+		method[1]["uri"] == result["params"]["textDocument"]["uri"]
+		or method[1]["uri"] == nil
+		or result["params"]["textDocument"]["uri"] == nil
+	then
 		util.jump_to_location(method[1], "utf-8")
 	else
 		api.nvim_command("tabnew")
