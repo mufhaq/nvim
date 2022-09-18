@@ -1,7 +1,7 @@
 vim.o.background = "dark"
 
 vim.opt.relativenumber = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.hidden = true
 vim.opt.errorbells = false
 vim.opt.tabstop = 4
