@@ -130,4 +130,16 @@ cmp.setup.cmdline(":", {
 	}, {
 		{ name = "cmdline" },
 	}),
+	formatting = {
+		format = function(entry, vim_item)
+			local icons = require("icons").kinds
+			vim_item.kind = icons[vim_item.kind]
+			vim_item.menu = ({
+				nvim_lsp = "[LSP]",
+				look = "[Dict]",
+				buffer = "[Buffer]",
+			})[entry.source.name]
+			return vim_item
+		end,
+	},
 })
