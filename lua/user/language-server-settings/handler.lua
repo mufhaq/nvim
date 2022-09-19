@@ -4,10 +4,10 @@ local api = vim.api
 local util = vim.lsp.util
 local handlers = vim.lsp.handlers
 
-local location_callback = function(_, method, result)
+local location_handler = function(_, method, result)
 	if
-		method[1]["uri"] == result["params"]["textDocument"]["uri"]
-		or method[1]["uri"] == nil
+		method[1]["targetUri"] == result["params"]["textDocument"]["uri"]
+		or method[1]["targetUri"] == nil
 		or result["params"]["textDocument"]["uri"] == nil
 	then
 		util.jump_to_location(method[1], "utf-8")
@@ -17,10 +17,10 @@ local location_callback = function(_, method, result)
 	end
 end
 
-handlers["textDocument/declaration"] = location_callback
-handlers["textDocument/definition"] = location_callback
-handlers["textDocument/typeDefinition"] = location_callback
-handlers["textDocument/implementation"] = location_callback
+handlers["textDocument/declaration"] = location_handler
+handlers["textDocument/definition"] = location_handler
+handlers["textDocument/typeDefinition"] = location_handler
+handlers["textDocument/implementation"] = location_handler
 
 M.on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
