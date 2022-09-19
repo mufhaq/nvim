@@ -28,6 +28,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "html", "yaml", "go" },
+		disable = { "html", "yaml", "go", "javascript", "typescript" },
 	},
 })
