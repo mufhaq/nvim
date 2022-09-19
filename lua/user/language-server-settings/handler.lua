@@ -7,8 +7,7 @@ local handlers = vim.lsp.handlers
 local location_handler = function(_, method, result)
 	if
 		method[1]["targetUri"] == result["params"]["textDocument"]["uri"]
-		or method[1]["targetUri"] == nil
-		or result["params"]["textDocument"]["uri"] == nil
+		or method[1]["uri"] == result["params"]["textDocument"]["uri"]
 	then
 		util.jump_to_location(method[1], "utf-8")
 	else
