@@ -66,11 +66,7 @@ null_ls.setup({
 
 					if isFormat then
 						format()
-					else
-						goto skip
 					end
-
-					::skip::
 				end,
 			})
 		end
