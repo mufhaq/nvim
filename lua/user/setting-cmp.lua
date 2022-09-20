@@ -7,7 +7,7 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 local compare = require("cmp.config.compare")
 
-luasnip.config.setup({
+luasnip.setup({
 	region_check_events = "CursorHold,InsertLeave",
 	delete_check_events = "TextChanged,InsertEnter",
 })
