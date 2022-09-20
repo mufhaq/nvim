@@ -112,19 +112,6 @@ ins_left({
 })
 
 ins_left({
-	"filetype",
-	colored = true,
-	icon_only = true,
-	cond = conditions.buffer_not_empty,
-	padding = { left = 1, right = 0 },
-})
-
-ins_left({
-	"filename",
-	cond = conditions.buffer_not_empty,
-})
-
-ins_left({
 	"filesize",
 	cond = conditions.buffer_not_empty,
 })
