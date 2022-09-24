@@ -3,7 +3,7 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local excluded_files = {
+local excluded_filetypes = {
 	"c",
 	"cpp",
 }
@@ -51,8 +51,8 @@ null_ls.setup({
 					local isFormat = nil
 
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					if #excluded_files > 0 then
-						for _, k in pairs(excluded_files) do
+					if #excluded_filetypes > 0 then
+						for _, k in pairs(excluded_filetypes) do
 							if k == vim.bo.filetype then
 								isFormat = false
 								break
