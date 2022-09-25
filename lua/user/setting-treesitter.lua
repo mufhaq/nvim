@@ -19,6 +19,7 @@ require("nvim-treesitter.configs").setup({
 		"jsonc",
 		"yaml",
 		"gomod",
+		"css",
 	},
 	sync_install = false, -- Install parsers synchronously (only applied to 'ensure_installed')
 	ignore_install = { "" }, -- List of parsers to ignore installing (for "all")
