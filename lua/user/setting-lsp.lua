@@ -17,7 +17,7 @@ local servers = {
 	"clangd",
 	"cssls",
 	"emmet_ls",
-	--"html",
+	"html",
 	"jdtls",
 	"omnisharp",
 	"jsonls",
