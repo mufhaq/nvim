@@ -121,6 +121,7 @@ ins_left({
 
 ins_left({
 	"filename",
+	padding = { left = 0 },
 	cond = conditions.buffer_not_empty,
 })
 
