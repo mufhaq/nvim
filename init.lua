@@ -6,7 +6,6 @@ require("keymaps")
 -- user
 require("user.setting-lsp")
 require("user.setting-cmp")
-require("user.setting-web-devicons")
 require("user.setting-trouble")
 require("user.setting-treesitter")
 require("user.setting-null-ls")
