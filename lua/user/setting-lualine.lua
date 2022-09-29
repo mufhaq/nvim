@@ -115,7 +115,6 @@ ins_left({
 	"filetype",
 	colored = true,
 	icon_only = true,
-	padding = { right = 0 },
 	cond = conditions.buffer_not_empty,
 })
 
