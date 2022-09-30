@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
 	use("mfussenegger/nvim-jdtls")
 	use("simrat39/rust-tools.nvim")
 	use("folke/trouble.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- CMP
 	use("hrsh7th/cmp-nvim-lsp")
