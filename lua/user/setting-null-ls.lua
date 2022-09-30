@@ -44,13 +44,12 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					local function format()
-						vim.lsp.buf.formatting_sync()
-					end
-
 					local isFormat = nil
 
-					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+					local function format()
+						vim.lsp.buf.format({ bufnr = bufnr })
+					end
+
 					if #excluded_filetypes > 0 then
 						for _, k in pairs(excluded_filetypes) do
 							if k == vim.bo.filetype then
