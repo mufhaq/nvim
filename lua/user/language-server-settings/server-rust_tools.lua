@@ -157,5 +157,5 @@ return {
 		standalone = true,
 		on_attach = require("user.language-server-settings.handler").on_attach,
 		capabilities = require("user.language-server-settings.handler").default_capabilities,
-	}, -- rust-analyer options
+	}, -- rust-analyzer options
 }
