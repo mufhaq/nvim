@@ -28,6 +28,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
 vim.opt.linebreak = true
-vim.opt.clipboard = "unnamedplus"
-
--- global
+-- vim.opt.clipboard:append("unnamedplus")
