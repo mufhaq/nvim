@@ -8,6 +8,14 @@ local excluded_filetypes = {
 	"cpp",
 }
 
+local clang_format_file = vim.fn.getcwd() .. "/.clang-format"
+local clang_format = ""
+if vim.fn.empty(vim.fn.glob(clang_format_file)) == 1 then
+	clang_format = "{IndentWidth: 4}"
+else
+	clang_format = "file:" .. clang_format_file
+end
+
 null_ls.setup({
 	sources = {
 		formatting.gofmt,
@@ -33,7 +41,10 @@ null_ls.setup({
 		}),
 		formatting.rustfmt,
 		formatting.clang_format.with({
-			extra_args = { "-style={IndentWidth: 4}" },
+			extra_args = {
+				"-style",
+				clang_format,
+			},
 		}),
 	},
 	on_attach = function(client, bufnr)
