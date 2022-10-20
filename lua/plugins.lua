@@ -4,7 +4,6 @@ return require("packer").startup(function(use)
 	-- Colorschemes
 	use("morhetz/gruvbox")
 	use("Mofiqul/vscode.nvim")
-	use("navarasu/onedark.nvim")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
