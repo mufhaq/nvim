@@ -8,10 +8,11 @@ local excluded_filetypes = {
 	"cpp",
 }
 
+local clang_format_file_default = vim.fn.stdpath("config") .. "/config/clang-format"
 local clang_format_file = vim.fn.getcwd() .. "/.clang-format"
 local clang_format = ""
 if vim.fn.empty(vim.fn.glob(clang_format_file)) == 1 then
-	clang_format = "{IndentWidth: 4}"
+	clang_format = "file:" .. clang_format_file_default
 else
 	clang_format = "file:" .. clang_format_file
 end
