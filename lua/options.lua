@@ -1,5 +1,11 @@
 vim.o.background = "dark"
 
+-- global
+vim.g.markdown_fenced_languages = {
+	"ts=typescript",
+}
+
+-- opt
 vim.opt.relativenumber = true
 vim.opt.hlsearch = true
 vim.opt.hidden = true

@@ -22,6 +22,7 @@ local servers = {
 	"omnisharp",
 	"jsonls",
 	"yamlls",
+	"denols",
 }
 
 require("mason").setup({
