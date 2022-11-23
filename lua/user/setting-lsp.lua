@@ -94,6 +94,8 @@ for _, lsp in pairs(servers) do
 	if lsp == "clangd" then
 		default_capabilities.offsetEncoding = "utf-8"
 		configs = extend(lsp)
+	elseif lsp == "denols" then
+		configs = extend(lsp, {})
 	elseif lsp == "jdtls" then
 		goto skip
 	elseif lsp == "rust_analyzer" then
