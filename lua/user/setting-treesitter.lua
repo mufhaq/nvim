@@ -30,6 +30,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "yaml", "go", "javascript", "typescript", "rust", "c" },
+		disable = { "yaml", "go", "rust", "c" },
 	},
 })
