@@ -36,7 +36,7 @@ require("nvim-tree").setup({
 		icons = {
 			webdev_colors = true,
 			git_placement = "before",
-			padding = " ",
+			padding = "",
 			symlink_arrow = " ➛ ",
 			show = {
 				file = true,
@@ -46,12 +46,12 @@ require("nvim-tree").setup({
 			},
 			glyphs = {
 				folder = {
-					default = "",
-					open = "",
-					empty = "",
-					empty_open = "",
-					symlink = "",
-					symlink_open = "",
+					default = " ",
+					open = " ",
+					empty = " ",
+					empty_open = " ",
+					symlink = " ",
+					symlink_open = " ",
 				},
 				git = {
 					unstaged = "✗",
