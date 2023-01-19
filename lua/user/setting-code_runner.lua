@@ -7,5 +7,5 @@ require("code_runner").setup({
 		size = 20,
 	},
 	filetype_path = vim.fn.expand("~/.config/nvim/code_runner.json"),
-	project_path = vim.fn.expand("~/.config/nvim/project_manager.json"),
+	-- project_path = vim.fn.expand("~/.config/nvim/project_manager.json"),
 })
