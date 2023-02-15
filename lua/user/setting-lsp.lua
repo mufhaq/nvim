@@ -7,7 +7,7 @@ vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 local on_attach = require("user.language-server-settings.handler").on_attach
 
 local servers = {
-	"sumneko_lua",
+	"lua_ls",
 	"gopls",
 	"tsserver",
 	"pyright",
