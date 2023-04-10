@@ -33,9 +33,11 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip")
 
-	use("nvim-tree/nvim-web-devicons")
+	-- Latex
+	use("lervag/vimtex")
 
 	-- Others
+	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
