@@ -23,7 +23,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
 	-- "denols",
-	"texlab",
+	-- "texlab",
 }
 
 require("mason").setup({
