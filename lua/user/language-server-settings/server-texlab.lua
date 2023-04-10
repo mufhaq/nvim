@@ -7,10 +7,17 @@ return {
 			auxDirectory = ".",
 			bibtexFormatter = "texlab",
 			build = {
-				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+				args = {
+					"-pdf",
+					"-interaction=nonstopmode",
+					"-outdir=build",
+					"-auxdir=others",
+					"-synctex=1",
+					"%f",
+				},
 				executable = "latexmk",
 				forwardSearchAfter = false,
-				onSave = false,
+				onSave = true,
 			},
 			chktex = {
 				onEdit = false,
