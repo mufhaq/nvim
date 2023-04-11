@@ -23,7 +23,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
 	-- "denols",
-	-- "texlab",
+	"texlab",
 }
 
 require("mason").setup({
@@ -98,6 +98,8 @@ for _, lsp in pairs(servers) do
 	elseif lsp == "denols" then
 		configs = extend(lsp, {})
 	elseif lsp == "jdtls" then
+		goto skip
+	elseif lsp == "texlab" then
 		goto skip
 	elseif lsp == "rust_analyzer" then
 		local rust_tools = require("rust-tools")
