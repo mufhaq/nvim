@@ -1,7 +1,7 @@
 require("nvim-tree").setup({
 	sort_by = "name",
 	view = {
-		centralize_selection = true,
+		centralize_selection = false,
 		adaptive_size = false,
 		mappings = {
 			list = {
