@@ -17,7 +17,7 @@ return {
 				},
 				executable = "latexmk",
 				forwardSearchAfter = false,
-				onSave = true,
+				onSave = false,
 			},
 			chktex = {
 				onEdit = false,

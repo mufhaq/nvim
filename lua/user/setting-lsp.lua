@@ -99,8 +99,6 @@ for _, lsp in pairs(servers) do
 		configs = extend(lsp, {})
 	elseif lsp == "jdtls" then
 		goto skip
-	elseif lsp == "texlab" then
-		goto skip
 	elseif lsp == "rust_analyzer" then
 		local rust_tools = require("rust-tools")
 		local rust_tools_opts = require("user.language-server-settings.server-rust_tools")
