@@ -17,7 +17,10 @@ return require("packer").startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
-	use("j-hui/fidget.nvim")
+	use({
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+	})
 	use("mfussenegger/nvim-jdtls")
 	use("simrat39/rust-tools.nvim")
 	use("folke/trouble.nvim")

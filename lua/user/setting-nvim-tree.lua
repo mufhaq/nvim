@@ -72,9 +72,9 @@ require("nvim-tree").setup({
 	diagnostics = {
 		enable = true,
 		icons = {
-			error = " ",
+			error = "󰅚 ",
 			warning = " ",
-			hint = " ",
+			hint = "󰌶 ",
 			info = " ",
 		},
 	},
