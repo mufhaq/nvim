@@ -19,6 +19,12 @@ require("nvim-tree").setup({
 		show_on_dirs = true,
 		timeout = 400,
 	},
+	tab = {
+		sync = {
+			open = true,
+			close = true,
+		},
+	},
 	renderer = {
 		add_trailing = false,
 		group_empty = true,
