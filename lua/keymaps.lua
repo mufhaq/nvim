@@ -11,7 +11,7 @@ local opts = { noremap = true, silent = true }
 --  command_mode        = 'c'
 
 -- Neovim
-keymap("n", "<leader>c", "<CMD>noh<CR>", opts)
+keymap("n", "<C-p>\\", "<CMD>noh<CR>", opts)
 -- Tab
 keymap({ "n", "i", "c" }, "<C-l>", "<CMD>tabnext<CR>", opts)
 keymap({ "n", "i", "c" }, "<C-h>", "<CMD>tabprevious<CR>", opts)
