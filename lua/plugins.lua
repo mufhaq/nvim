@@ -29,6 +29,9 @@ require("lazy").setup({
 		end,
 	},
 	{
+		"nvim-treesitter/nvim-treesitter-context",
+	},
+	{
 		"j-hui/fidget.nvim",
 		tag = "legacy",
 	},
