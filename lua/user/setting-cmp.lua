@@ -18,8 +18,13 @@ cmp.setup({
 		if in_prompt then -- this will disable cmp in the Telescope window (taken from the default config)
 			return false
 		end
+
 		local context = require("cmp.config.context")
-		return not (context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
+		if vim.fn.mode() == "i" then
+			return not (context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
+		else
+			return true
+		end
 	end,
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
