@@ -1,6 +1,6 @@
 require("code_runner").setup({
 	mode = "term",
-	focus = false,
+	focus = true,
 	startinsert = false,
 	term = {
 		position = "bot",
