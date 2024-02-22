@@ -6,18 +6,15 @@ return {
 	single_file_support = true,
 	settings = {
 		Lua = {
+			completion = {
+				callSnippet = "Replace",
+			},
 			runtime = {
 				version = "LuaJIT",
 			},
-			diagnostics = {
-				globals = { "vim" },
-			},
 			workspace = {
-				--library = vim.api.nvim_get_runtime_file("$VIMRUNTIME", true),
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua/")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
-				},
+				checkThirdParty = false,
+				-- use plugin "neodev.nvim" instead of "workspace = {}"
 			},
 			telemetry = {
 				enable = false,

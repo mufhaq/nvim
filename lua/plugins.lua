@@ -48,6 +48,8 @@ require("lazy").setup({
 	"L3MON4D3/LuaSnip",
 	"hrsh7th/cmp-nvim-lua",
 	"saadparwaiz1/cmp_luasnip",
+	-- Lua API Completion
+	{ "folke/neodev.nvim", opts = {} },
 	-- Latex
 	"lervag/vimtex",
 	-- Others

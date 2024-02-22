@@ -4,6 +4,7 @@ require("options")
 require("keymaps")
 
 -- user
+require("user.setting-neodev")
 require("user.setting-lsp")
 require("user.setting-cmp")
 require("user.setting-lsp-signature")
