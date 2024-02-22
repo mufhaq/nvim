@@ -12,6 +12,9 @@ return {
 			runtime = {
 				version = "LuaJIT",
 			},
+			diagnostics = {
+				disable = { "missing-fields" },
+			},
 			workspace = {
 				checkThirdParty = false,
 				-- use plugin "neodev.nvim" instead of "workspace = {}"
