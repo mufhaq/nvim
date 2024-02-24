@@ -24,6 +24,7 @@ require("nvim-treesitter.configs").setup({
 	sync_install = false, -- Install parsers synchronously (only applied to 'ensure_installed')
 	ignore_install = { "" }, -- List of parsers to ignore installing (for "all")
 	highlight = {
+		enable = true,
 		disable = { "" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = false,
 	},
