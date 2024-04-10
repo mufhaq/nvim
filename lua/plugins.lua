@@ -73,7 +73,17 @@ require("lazy").setup({
 	"lewis6991/impatient.nvim",
 	"norcalli/nvim-colorizer.lua",
 	{ "michaelb/sniprun", run = "bash ./install.sh" },
-	{ "kyazdani42/nvim-tree.lua", tag = "nightly" },
+	{
+		"nvim-tree/nvim-tree.lua",
+		 version = "*",
+		 lazy = false,
+		 dependencies = {
+		   "nvim-tree/nvim-web-devicons",
+		 },
+		 config = function()
+		   require("nvim-tree").setup {}
+		 end,
+	},
 	{ "projekt0n/github-nvim-theme" },
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	"numToStr/Comment.nvim",
