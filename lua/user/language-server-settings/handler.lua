@@ -3,6 +3,7 @@ _G.M = {}
 local api = vim.api
 local util = vim.lsp.util
 local handlers = vim.lsp.handlers
+local lfunctions = require("functions").user
 
 local location_handler = function(_, method, result)
 	if #method < 1 then
@@ -47,6 +48,7 @@ M.on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 	vim.keymap.set("n", "<space>f", vim.lsp.buf.format, bufopts)
+	vim.keymap.set("v", "<C-\\>f", lfunctions.range_format, bufopts)
 
 	-- Disable lspconfig formatter
 	client.server_capabilities.documentFormattingProvider = false
