@@ -34,6 +34,9 @@ keymap("n", "<C-p>b", require("telescope.builtin").buffers, opts)
 keymap("n", "<C-p>s", require("telescope.builtin").grep_string, opts)
 keymap("n", "<C-p>f", require("telescope").extensions.file_browser.file_browser, opts)
 
+-- Trouble
+keymap("n", "<F4>", "<CMD>Trouble<CR>", opts)
+
 -- Sniprun
 keymap("n", "<F5>", functions.sniprun, opts)
 keymap("n", "<F6>", "<CMD>SnipClose<CR>", opts)
