@@ -144,7 +144,7 @@ cmp.setup.cmdline(":", {
 	sources = {
 		{ name = "cmdline" },
 		{ name = "path" },
-		{ name = "buffer" },
+		-- { name = "buffer" },
 	},
 	formatting = {
 		format = function(entry, vim_item)
