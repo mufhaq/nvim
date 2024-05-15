@@ -1,6 +1,9 @@
 local util = require("lspconfig").util
 return {
-	cmd = { "clangd" },
+	cmd = {
+		"clangd",
+		"--header-insertion=never",
+	},
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 	root_dir = util.root_pattern(
 		".clangd",
