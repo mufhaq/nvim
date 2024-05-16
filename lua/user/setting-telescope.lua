@@ -42,6 +42,11 @@ telescope.setup({
 			hidden = true,
 			no_ignore = false,
 		},
+		commands = {
+			theme = "ivy",
+			hidden = true,
+			no_ignore = false,
+		},
 	},
 	extensions = {
 		file_browser = {

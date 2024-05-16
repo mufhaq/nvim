@@ -32,6 +32,7 @@ keymap("n", "<C-p>p", require("telescope.builtin").find_files, opts)
 keymap("n", "<C-p>l", require("telescope.builtin").live_grep, opts)
 keymap("n", "<C-p>b", require("telescope.builtin").buffers, opts)
 keymap("n", "<C-p>s", require("telescope.builtin").grep_string, opts)
+keymap("n", "<C-p>c", require("telescope.builtin").commands, opts)
 keymap("n", "<C-p>f", require("telescope").extensions.file_browser.file_browser, opts)
 
 -- Trouble
