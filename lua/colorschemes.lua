@@ -17,7 +17,7 @@ function M.github()
 	})
 end
 
-function M.vscode()
+function M.old_vscode()
 	vim.cmd([[ colo vscode ]])
 	hl(0, "BufferLineFill", { bg = "#1e1e1e" })
 	hl(0, "BufferLineIndicatorSelected", { fg = "#0a7aca" })
@@ -26,6 +26,36 @@ function M.vscode()
 	hl(0, "BufferLineCloseButtonSelected", { bg = "#1e1e1e", bold = false })
 	hl(0, "BufferLineBackground", { bg = "#1e1e1e" })
 	hl(0, "BufferLineBufferSelected", { bold = true })
+end
+
+function M.vscode()
+	local color = require("vscode.colors").get_colors()
+	require("vscode").setup({
+		-- Enable transparent background
+		transparent = false,
+		-- Enable italic comment
+		italic_comments = true,
+		-- Underline `@markup.link.*` variants
+		underline_links = true,
+		-- Disable nvim-tree background color
+		disable_nvimtree_bg = true,
+		-- Override colors (see ./lua/vscode/colors.lua)
+		color_overrides = {
+			--vscLineNumber = "#FFFFFF",
+		},
+		-- Override highlight groups (see ./lua/vscode/theme.lua)
+		group_overrides = {
+			Cursor = { fg = color.vscDarkBlue, bg = color.vscLightGreen, bold = true },
+			BufferLineFill = { bg = "#1E1E1E" },
+			BufferLineIndicatorSelected = { fg = "#0A7ACA" },
+			BufferLineCloseButton = { bg = "#1e1e1e" },
+			BufferLineCloseButtonSelected = { bg = "#1E1E1E", bold = false },
+			BufferLineBackground = { bg = "#1E1E1E" },
+			BufferLineBufferSelected = { bold = true },
+		},
+	})
+
+	vim.cmd.colorscheme("vscode")
 end
 
 return M
