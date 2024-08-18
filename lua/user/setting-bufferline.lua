@@ -29,7 +29,7 @@ require("bufferline").setup({
 		max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
 		tab_size = 18,
 		diagnostics = "nvim_lsp",
-		diagnostics_update_in_insert = true,
+		-- diagnostics_update_in_insert = true, # DEPRECATED
 		-- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
 		diagnostics_indicator = function(count, level, _, _)
 			return "(" .. count .. " " .. level .. ")"

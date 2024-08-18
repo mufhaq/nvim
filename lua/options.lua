@@ -35,3 +35,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.clipboard:append("unnamedplus")
+
+vim.diagnostic.config({
+	update_in_insert = true,
+})
