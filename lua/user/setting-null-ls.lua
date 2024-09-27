@@ -6,6 +6,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local excluded_filetypes = {
 	"c",
 	"cpp",
+	"python",
 }
 
 local clang_format_file_default = vim.fn.stdpath("config") .. "/config/clang-format"
