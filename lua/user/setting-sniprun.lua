@@ -3,6 +3,6 @@ require("sniprun").setup({
 		"Terminal",
 	},
 	display_options = {
-		terminal_width = 65,
+		terminal_position = "horizontal",
 	},
 })
