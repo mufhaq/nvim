@@ -4,5 +4,6 @@ require("sniprun").setup({
 	},
 	display_options = {
 		terminal_width = 65,
+		terminal_scrollback = vim.o.scrollback,
 	},
 })
