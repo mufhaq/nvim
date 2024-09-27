@@ -9,7 +9,8 @@ local on_attach = require("user.language-server-settings.handler").on_attach
 local servers = {
 	"lua_ls",
 	"gopls",
-	"tsserver",
+	-- "tsserver", # deprecated
+	"ts_ls",
 	"pyright",
 	"rust_analyzer",
 	"intelephense",
